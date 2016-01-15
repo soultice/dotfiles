@@ -1,0 +1,4 @@
+xrandr --output DVI-D-0 --rotate left
+xrandr --output DVI-D-0 --left-of HDMI-0
+xrandr --output DVI-D-0 --pos 0x-600 --output HDMI-0 --pos 1200x0
+xsetroot -cursor_name left_ptr
