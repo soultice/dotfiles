@@ -1,5 +1,5 @@
-let g:ycm_path_to_python_interpreter = '/home/flo/.pyenv/shims/python'
-let g:python_host_prog = '/usr/bin/python2'
+let g:python_host_prog = '/usr/bin/python'
+let g:python3_host_prog = '/usr/bin/python3'
 set nocompatible            " be iMproved
 filetype off                " required!
 
@@ -13,6 +13,12 @@ endif
 "   Plugins
 " +---------+
 call plug#begin('~/.vim/plugged')
+Plug 'blindFS/vim-regionsyntax'
+"Regional-SyntaxHighlighting"
+Plug 'derekwyatt/vim-scala'
+"scala support"
+Plug 'vim-latex/vim-latex'
+" " Latex support
 Plug 'ervandew/supertab'
 " " syntax and error highlighter
 Plug 'scrooloose/syntastic'
@@ -48,10 +54,6 @@ Plug 'tpope/vim-commentary'
 Plug 'ledger/vim-ledger', {'for': 'ledger'}
 " Better line numbers
 Plug 'myusuf3/numbers.vim'
-" Fast and fuzzy completion
-Plug 'Valloric/YouCompleteMe', {'do': './install.sh --clang-completer', 'for': ['python', 'c', 'cpp', 'javascript']}
-" Better Python support
-"Plug 'davidhalter/jedi-vim'
 " Higlight opening/closing tags in XML
 Plug 'Valloric/MatchTagAlways', {'for': ['xml', 'html']}
 " better reStructured Text support
@@ -61,7 +63,6 @@ Plug 'Rykka/clickable.vim', {'for': 'rst'}
 Plug 'alfredodeza/pytest.vim', {'for': 'python'}
 " support for ReactJS' JSX format
 Plug 'mxw/vim-jsx'
-"Plug 'jelera/vim-javascript-syntax', {'for': 'javascript'}
 Plug 'pangloss/vim-javascript', {'for': 'javascript'}
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'Raimondi/delimitMate'
@@ -71,6 +72,15 @@ Plug 'christoomey/vim-tmux-navigator'
 "Plug 'vim-scripts/DrawIt'
 "Plug 'ardagnir/vimbed'
 Plug 'kchmck/vim-coffee-script', {'for': 'coffee'}
+
+" Airline Themes
+Plug 'vim-airline/vim-airline-themes'
+" Colorschemes
+Plug 'flazz/vim-colorschemes'
+" Molokai colorscheme
+Plug 'tomasr/molokai'
+" Visundo
+Plug 'sjl/gundo.vim'
 
 Plug 'elzr/vim-json', {'for': 'json'}
 
@@ -95,8 +105,8 @@ Plug 'bitc/vim-hdevtools', {'for': 'haskell'}
 Plug 'adimit/prolog.vim', {'for': 'prolog'}
 
 " Pandoc
-Plug 'vim-pandoc/vim-pandoc', {'for': 'pandoc'}
-Plug 'vim-pandoc/vim-pandoc-syntax', {'for': 'pandoc'}
+Plug 'vim-pandoc/vim-pandoc', {'for': ['pandoc', 'markdown']}
+Plug 'vim-pandoc/vim-pandoc-syntax', {'for': ['pandoc', 'markdown']}
 call plug#end()
 
 " +----------------+
@@ -216,6 +226,9 @@ let g:syntastic_python_checkers = ['python', 'flake8']
 let g:syntastic_check_on_open = 1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+
+"""ackp
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 """ CtrlP configuration
 " BUG! Opening a matching file with gvim --remote will fail with E479!
