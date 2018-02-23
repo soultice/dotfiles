@@ -1,0 +1,12 @@
+total 48K
+drwxrwxr-x  3 flo flo 4,0K Feb 24 00:18 .
+drwxr-xr-x 96 flo flo 4,0K Feb 24 00:18 ..
+drwxrwxr-x  8 flo flo 4,0K Feb 24 00:18 .git
+lrwxrwxrwx  1 flo flo   13 Feb 23 23:14 .gitconfig -> ../.gitconfig
+-rw-r--r--  1 flo flo    0 Feb 24 00:18 lllah
+-rw-rw-r--  1 flo flo   49 Jan 24  2016 README.md
+-rw-r--r--  1 flo flo 1,6K Feb 24 00:15 surfingkeys_conf
+-rw-rw-r--  1 flo flo 3,8K Jan 24  2016 vimperatorrc
+-rw-rw-r--  3 flo flo  14K Jul 20  2017 vimrc
+-rw-rw-r--  1 flo flo  176 Jan 24  2016 xprofile
+-rw-rw-r--  2 flo flo 3,0K Nov 19 22:45 zshrc
