@@ -19,6 +19,7 @@ settings.theme = '\
 .sk_theme .url { \
     color: #C3E88D; \
     overflow: hidden; \
+    text-overflow: ellipsis; \
     font-size: 11px; \
 } \
 .sk_theme .annotation { \
@@ -53,6 +54,8 @@ settings.theme = '\
 .sk_theme #sk_omnibarSearchResult li .title{ \
     color: #C792EA; \
     font-size: 16px; \
+    overflow: hidden; \
+    text-overflow: ellipsis; \
 } \
 .sk_theme #sk_omnibarSearchResult li.focused .title { \
     color: #fff; \
