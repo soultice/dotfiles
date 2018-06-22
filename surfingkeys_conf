@@ -1,66 +1,70 @@
-
-settings.scrollStepSize = 220;
-
-settings.theme = `
-.sk_theme 
-    background: rgba(255,36,36,0.9);
-}
-
-.sk_theme .prompt, .sk_theme .resultPage {
-    color: #170b0b;
-}
-.sk_theme .url {
-    font-style: oblique;
-    color: #222;
-}
-.sk_theme .omnibar_folder {
-    color: #df1010;
-}
-.sk_theme .omnibar_timestamp {
-    color: #0f0c0e;
-}
-.sk_theme .omnibar_visitcount {
-    color: #dcff22;
-}
-.sk_tab {
-    display: inline-block;
-    border-radius: 3px;
-    padding: 10px 20px;
-    margin: 5px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(139, 155, 176, 0.39)), color-stop(100%,#B0CCEF));
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
-}
-.sk_tab_hint {
-    text-transform: lowercase;
-    display: inline-block;
-    float:right;
-    font-size: 10pt;
-    font-weight: bold;
-    padding: 0px 2px 0px 2px;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785), color-stop(100%,#FFC542));
-    color: #000;
-    border: solid 1px #C38A22;
-    border-radius: 3px;
-    box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.3);
-}
-
-.sk_hints {
-    text-transform: lowercase;
-    position: absolute;
-    display: block;
-    font-size: 8pt;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 3px 7px 0px;
-    padding: 0px 2px;
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(rgb(255, 247, 133)), to(rgb(255, 197, 66)));
-    border-width: 1px;
-    border-style: solid;
-    border-color: rgb(195, 138, 34);
-    border-image: initial;
-    border-radius: 3px;
-}
-.sk_theme .annotation {
-}
-.sk_theme .focused {
-}`;
+iunmap(":");
+Hints.style('border: solid 2px #F78C6C; padding: 1.5px; color:#efe1eb; background: initial; background-color: #263238CF;');
+Hints.style(("border: solid 2px #89DDFF; padding: 1.5px; color:#efe1eb; background: initial; background-color: #263238CF;"), "text");
+settings.tabsThreshold = 0;
+settings.omnibarPosition = "top";
+settings.scrollStepSize = 200;
+settings.enableAutoFocus = false;
+settings.theme = '\
+.sk_theme { \
+    background: #263238EF; \
+    color: #d3d3d3; \
+} \
+.sk_theme tbody { \
+    color: #d3d3d3; \
+} \
+.sk_theme input { \
+    color: #EEFFFF; \
+} \
+.sk_theme .url { \
+    color: #C3E88D; \
+    overflow: hidden; \
+    font-size: 11px; \
+} \
+.sk_theme .annotation { \
+    color: #555; \
+} \
+.sk_theme .focused { \
+    color: #000; \
+} \
+#sk_omnibarSearchArea {\
+    margin-left: 10px; \
+} \
+.sk_theme .omnibar_highlight { \
+    color: #FFCC00; \
+} \
+.sk_theme .omnibar_folder { \
+    color: #B2CCD6; \
+    font-size: 12px; \
+} \
+.sk_theme .omnibar_visitcount { \
+    display: none; \
+} \
+.sk_theme .omnibar_timestamp { \
+    color: #cc4b9c; \
+    font-size: 12px; \
+} \
+.sk_theme #sk_omnibarSearchResult li { \
+    padding: 3px; \
+    border-bottom: 3px solid #5f7a873F;\
+    padding-top: 3px; \
+    margin-top: 3px; \
+} \
+.sk_theme #sk_omnibarSearchResult li .title{ \
+    color: #C792EA; \
+    font-size: 16px; \
+} \
+.sk_theme #sk_omnibarSearchResult li.focused .title { \
+    color: #fff; \
+} \
+.sk_theme #sk_omnibarSearchResult>ul>li:nth-child(odd) { \
+    background: transparent; \
+} \
+.sk_theme #sk_omnibarSearchResult>ul>li.focused { \
+    background: #192227; \
+} \
+#sk_omnibar { \
+ border-radius: 15px; \
+ padding: 10px; \
+} \
+'
