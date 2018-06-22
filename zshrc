@@ -5,7 +5,7 @@ export PROJECT_HOME=$HOME/Devel
 export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
 source /usr/local/bin/virtualenvwrapper_lazy.sh
 
-export PATH=$PATH:/home/flo/panel/
+export PATH=$PATH:/home/$USER/panel/
 export PANEL_FIFO="/tmp/panel-fifo"
 
 export TERM=xterm-256color
@@ -83,5 +83,5 @@ modebat () {
 
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/home/flo/.sdkman"
+export SDKMAN_DIR="/home/$USER/.sdkman"
 #[[ -s "/home/flo/.sdkman/bin/sdkman-init.sh" ]] && source "/home/flo/.sdkman/bin/sdkman-init.sh"
